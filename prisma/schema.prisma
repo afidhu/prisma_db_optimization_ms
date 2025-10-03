@@ -63,9 +63,13 @@ model Post {
   updatedAt DateTime @updatedAt
   title     String
   content   String?
+  comments Int @default(0)
   published Boolean  @default(false)
-  author    User     @relation(fields: [authorId], references: [id])
+  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade) ///HERE Cascande(when user deleted and its post is deleted)
   authorId  Int
+  ///||||||IF YOU SETNULL AS BELLOW, MUST PUT OPTIONAL(?) as nullable, LOOK BELLOW/////
+  // author    User ?    @relation(fields: [authorId], references: [id], onDelete: SetNull) ///HERE Cascande(when user deleted and its post is deleted)
+  // authorId  Int?
 }
 
 model Profile {
