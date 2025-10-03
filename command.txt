@@ -1,0 +1,15 @@
+///////////////init project
+
+ npm init -y
+    npm install express
+    npm install -D typescript @types/express ts-node
+    npx tsc --init
+
+////////////////github 
+    echo "# prisma_db_optimization_ms" >> README.md
+git init
+git add .
+git commit -m "add relation fielter"
+git branch -M main
+git remote add origin https://github.com/afidhu/prisma_db_optimization_ms.git
+git push -u origin main
