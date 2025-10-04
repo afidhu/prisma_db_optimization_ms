@@ -51,7 +51,8 @@ model User {
   id      Int      @id @default(autoincrement())
   email   String   @unique
   name    String?
-  phone Int
+  password String
+  phone Int?
   posts   Post[]
   profile Profile?
 }
