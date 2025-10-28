@@ -8,6 +8,7 @@ import aggregatefunctionRouter from './router/aggregatefunctionRouter.ts'
 import pagenationRouter from './router/pagenationRouter.ts'
 import auth2Jwt from './router/auth2JwtRouter.ts'
 
+import app_router from './push_notfication/routers/app_router.ts'
 
 dotenv.config()
 
@@ -18,6 +19,14 @@ export const prisma =new PrismaClient()
 const port = process.env.PORT || 3000;
 export const jwt_secret =process.env.JWT_SECRET!
 app.use(express.json())
+
+
+//////THIS FOR PUSH NOTIFICATION////////////
+
+app.use('/',app_router)
+////////////////////////
+
+
 
 app.use('/post',postRouter)
 app.use('/user',authRouter)

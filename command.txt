@@ -9,7 +9,7 @@
     echo "# prisma_db_optimization_ms" >> README.md
 git init
 git add .
-git commit -m "add relation fielter, transactions and more like AUTH2"
+git commit -m "add relation fielter, transactions and more like AUTH2 and flutter"
 git branch -M main
 git remote add origin https://github.com/afidhu/prisma_db_optimization_ms.git
 git push -u origin main
